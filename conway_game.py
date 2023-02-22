@@ -1,24 +1,23 @@
 from tkinter import ttk
+from tkinter import Tk
 
 # * GOAL: Simulate Conway's Game of life with OOP
-
-
-
-# TODO: GUI buttons for start/stop/randomise/generations
-# TODO: class method for reset
-
 # ? can game class be written using the tkinter Frame class as an abstract class
 
 class game(ttk.Frame):
 
-    def __init__(self):
-        pass
+    def __init__(self, container):
+        super().__init__(container)
+        self.container = container
+
+        self.grid(row = 0, column = 0)
+        self.size_x = 100
+        self.size_y = 100
 
     def starting_ui(self):
-        # TODO: start button
-        # TODO: randomise button
-        # TODO: reset button
-        # TODO: generations button(s)
+        # TODO: start/stop/reset/randomise buttons
+        # * each button addressable depending on state of the game
+        # TODO: generations window
         pass
     
     def build_grid(self):
@@ -26,13 +25,7 @@ class game(ttk.Frame):
         pass
     
     def toggle(self):
-        # TODO: per cell toggle
-        pass
-
-    def start(self):
-        pass
-
-    def stop(self):
+        # TODO: per cell clickable toggle 
         pass
 
     def simulate(self):
@@ -40,8 +33,18 @@ class game(ttk.Frame):
         pass
 
     def randomise(self):
-        # TODO: randomise intial conditions
+        # TODO: randomise initial grid conditions
+        pass
+
+    def reset(self):
+        # TODO: stop simulation and reset grid
+        pass
+
+    def count_neighbours(self):
+        # TODO: compute number of neighbours for each valid cell
         pass
 
 if __name__ == '__main__':
-    game_of_life = game()
+    root = Tk()
+    game_of_life = game(root)
+    root.mainloop()
