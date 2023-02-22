@@ -1,20 +1,46 @@
-import tkinter
+from tkinter import ttk
 
 # * GOAL: Simulate Conway's Game of life with OOP
 
-# TODO: class method to initialise GUI
-# TODO: class method to build game grid
-# TODO: class method for per cell toggle
-# TODO: class method to simulate game
-# TODO: class method for randomised initial state
+
+
 # TODO: GUI buttons for start/stop/randomise/generations
 # TODO: class method for reset
 
-# ? can game class be written as an abstract class from the tkinter Frame
+# ? can game class be written using the tkinter Frame class as an abstract class
 
-class game:
+class game(ttk.Frame):
 
     def __init__(self):
+        pass
+
+    def starting_ui(self):
+        # TODO: start button
+        # TODO: randomise button
+        # TODO: reset button
+        # TODO: generations button(s)
+        pass
+    
+    def build_grid(self):
+        # TODO: build game grid
+        pass
+    
+    def toggle(self):
+        # TODO: per cell toggle
+        pass
+
+    def start(self):
+        pass
+
+    def stop(self):
+        pass
+
+    def simulate(self):
+        # TODO: simulate n generations
+        pass
+
+    def randomise(self):
+        # TODO: randomise intial conditions
         pass
 
 if __name__ == '__main__':
