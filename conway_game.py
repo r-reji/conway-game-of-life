@@ -10,6 +10,8 @@ import tkinter
 # TODO: GUI buttons for start/stop/randomise/generations
 # TODO: class method for reset
 
+# ? can game class be written as an abstract class from the tkinter Frame
+
 class game:
 
     def __init__(self):
@@ -17,4 +19,3 @@ class game:
 
 if __name__ == '__main__':
     game_of_life = game()
-    
